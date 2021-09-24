@@ -5,9 +5,7 @@ Created on Thu Sep 23 13:21:36 2021
 @author: BOZ
 """
 import torch
-from torch.autograd import Variable
-from torch.nn import Linear, ReLU, CrossEntropyLoss, Sequential, Conv2d, MaxPool2d, Module, Softmax, BatchNorm2d, Dropout, AvgPool2d,init
-from torch.optim import Adam, SGD
+from torch.nn import Linear, ReLU, Sequential, Conv2d, MaxPool2d, Module, BatchNorm2d, Dropout, AvgPool2d,init
 
 torch.manual_seed(0)
 
