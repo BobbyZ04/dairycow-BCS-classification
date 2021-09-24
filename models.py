@@ -77,12 +77,12 @@ class Fire(Module):
                  expand1x1_planes, expand3x3_planes):
         super(Fire, self).__init__()
         self.inplanes = inplanes
-        self.squeeze = Conv2d(inplanes, squeeze_planes, kernel_size=1)#定义压缩层，1X1卷积
+        self.squeeze = Conv2d(inplanes, squeeze_planes, kernel_size=1)
         self.squeeze_activation = ReLU(inplace=True)
-        self.expand1x1 = Conv2d(squeeze_planes, expand1x1_planes,#定义扩展层，1X1卷积
+        self.expand1x1 = Conv2d(squeeze_planes, expand1x1_planes,
                                    kernel_size=1)
         self.expand1x1_activation =ReLU(inplace=True)
-        self.expand3x3 = Conv2d(squeeze_planes, expand3x3_planes,#定义扩展层，3X3卷积
+        self.expand3x3 = Conv2d(squeeze_planes, expand3x3_planes,
                                    kernel_size=3, padding=1)
         self.expand3x3_activation =ReLU(inplace=True)
 
