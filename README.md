@@ -1,2 +1,2 @@
 # dairycow-BCS-classification
-made and preprocessed image dataset and implemented neural network models
+This project is designed for dairy cow Body Condition Score automatically classification by Kinect v2 depth camera. Built an image dataset and implemented morphalogical and deep learning models to compare results.
