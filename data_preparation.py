@@ -4,7 +4,7 @@ Created on Fri Sep 24 10:09:12 2021
 
 @author: BOZ
 """
-#import pandas as pd
+
 from tqdm import tqdm
 from skimage.io import imread
 from skimage.transform import rotate,resize
@@ -12,9 +12,6 @@ from skimage.util import random_noise
 import numpy as np
 from sklearn.model_selection import train_test_split
 import torch
-
-
-# data = pd.read_csv('C:/Users/BOZ/Zoetis_BCS/CNN_dataset/training_labels2.csv',index_col=False)
 
 # load images
 def load_dataset(img_names,data_path,labels):
