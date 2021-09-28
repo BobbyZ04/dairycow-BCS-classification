@@ -1,4 +1,4 @@
-# dairycow-BCS-classification
+# dairycow-BCS-Estimation
 This project is designed for dairy cow Body Condition Score automatically classification by Kinect v2 depth camera. Built an image dataset and implemented morphalogical and deep learning models to compare results.
 
 ![](https://github.com/BobbyZ04/dairycow-BCS-classification/blob/main/cow_BCS.jpg)
