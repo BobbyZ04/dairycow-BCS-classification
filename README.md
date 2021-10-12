@@ -7,7 +7,7 @@ This project is designed for dairy cow Body Condition Score automatically classi
 Body Condition Score is a measure of relative amount of subcutaneous body fat or energy reserved in cows. It is widely used for evaluating dairy cow's health status and milk production situation. Nowadays most of the BCS measurements are done by very experienced professionals, which require high cost of human resouces, time and money. In this repo, we used Microsoft Kinect v2 3D-cameras to take videos of dairy cows and made our datasets and applied several different models on them.
 
 ## Raw dataset
-I collected the image frames from videos by ffmpeg, and then set some constraints on keeping valuable images in data_collection.py. Then got the 
+I collected the image frames from videos where lots of noises like dirty floors, humans, fences are in the images. Then I set some constraints on keeping useful images in data_collection.py. Then got the raw dataset with cow-back-only images.
 
 ## 3D-rolling ball model
 The key part of this model is the idea that the BCS of a cow has positive correlation with the angularity of its back. More angularity means skinnier the cow is.
