@@ -13,10 +13,11 @@ I collected the rgb and depth image frames from videos where lots of noises like
 The key part of this model is the idea that the BCS of a cow has positive correlation with the angularity of its back. More angularity means skinnier the cow is.
 The main process is to calculate the angularity of some cows with standard BCS using an open operation, define a baseline and then apply a polynomial regression model. By inputting weight and angularity data to the model, we got the output BCS results. The process and results are in the 3D-rolling ball model.ipynb.
 ### results
-Assume error range within 0.25 as the precise estimation, error range within 0.5 is the rough estimation. The precise estimation result is about <mark> 60% </mark>, and rough precise estimation is about <mark> 85% </mark>
-The overall 
+Assume error range within 0.25 as the precise estimation, error range within 0.5 is the rough estimation. The precise estimation result is about <mark> 60% </mark>, and rough precise estimation is about <mark> 85% </mark>.
+
 ![](https://github.com/BobbyZ04/dairycow-BCS-classification/blob/main/images/rollingball_result1.png)
 ![](https://github.com/BobbyZ04/dairycow-BCS-classification/blob/main/images/rollingball_result2.png)
+
 ![](https://github.com/BobbyZ04/dairycow-BCS-classification/blob/main/images/rollingball_result3.png)
 
 ## CNN models
@@ -34,9 +35,11 @@ After deviding the dataset to training - testing with 80% - 20%, applied augment
 
 Tried Squeezenet, CNN1, CNN2, turned out the simpliest model has the best results, avoiding overfitting well considering such a limited dataset.
 ### results
-Assume error range within 0.25 as the precise estimation, error range within 0.5 is the rough estimation. The precise estimation result is about <mark> 75% </mark>, and rough precise estimation is about <mark> 100% </mark>
+Assume error range within 0.25 as the precise estimation, error range within 0.5 is the rough estimation. The precise estimation result is about <mark> 75% </mark>, and rough precise estimation is about <mark> 100% </mark>.
+
 ![](https://github.com/BobbyZ04/dairycow-BCS-classification/blob/main/images/CNN_acc.png)
 ![](https://github.com/BobbyZ04/dairycow-BCS-classification/blob/main/images/CNN_loss.png)
+
 ![](https://github.com/BobbyZ04/dairycow-BCS-classification/blob/main/images/training_cm.png)
 ![](https://github.com/BobbyZ04/dairycow-BCS-classification/blob/main/images/testing_cm.png)
 
