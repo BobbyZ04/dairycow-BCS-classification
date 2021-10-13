@@ -1,1 +1,1 @@
-#images of the methods and results
+images of the methods and results
