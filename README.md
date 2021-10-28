@@ -58,5 +58,5 @@ I didn't have the camera device with me so were not able to use SDK or do the pr
 
 If I got the device all set up I would try both SDK and mannual calibration, should be able to aquire good results.
 
-##Next Step
+## Next Step
 Enlarge dataset, compare more sophisticated DL models, try YOLO/RCNN for detecting in the wild eventually to achieve fully automatic BCS estimation.
