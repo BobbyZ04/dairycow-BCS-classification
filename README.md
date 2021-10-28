@@ -12,7 +12,6 @@ I collected the rgb and depth image frames from videos where lots of noises like
 ## 3D-rolling ball model
 The key part of this model is the idea that the BCS of a cow has positive correlation with the angularity of its back. More angularity means skinnier the cow is.
 The main process is to calculate the angularity of some cows with standard BCS using an open operation, define a baseline and then apply a polynomial regression model. By inputting weight and angularity data to the model, we got the output BCS results. The process and results are in the 3D-rolling ball model.ipynb.
-![](https://github.com/BobbyZ04/dairycow-BCS-classification/blob/main/images/3d-rolling-ball-workflow.JPG)
 
 ### results
 Assume error range within 0.25 as the precise estimation, error range within 0.5 is the rough estimation. The precise estimation result is about <mark> 60% </mark>, and rough precise estimation is about <mark> 85% </mark>.
