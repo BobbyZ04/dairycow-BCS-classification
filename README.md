@@ -12,6 +12,8 @@ I collected the rgb and depth image frames from videos where lots of noises like
 ## 3D-rolling ball model
 The key part of this model is the idea that the BCS of a cow has positive correlation with the angularity of its back. More angularity means skinnier the cow is.
 The main process is to calculate the angularity of some cows with standard BCS using an open operation, define a baseline and then apply a polynomial regression model. By inputting weight and angularity data to the model, we got the output BCS results. The process and results are in the 3D-rolling ball model.ipynb.
+![](https://github.com/BobbyZ04/dairycow-BCS-classification/blob/main/images/3d-rolling-ball-workflow.JPG)
+
 ### results
 Assume error range within 0.25 as the precise estimation, error range within 0.5 is the rough estimation. The precise estimation result is about <mark> 60% </mark>, and rough precise estimation is about <mark> 85% </mark>.
 
@@ -43,3 +45,18 @@ Assume error range within 0.25 as the precise estimation, error range within 0.5
 ![](https://github.com/BobbyZ04/dairycow-BCS-classification/blob/main/images/training_cm.png)
 ![](https://github.com/BobbyZ04/dairycow-BCS-classification/blob/main/images/testing_cm.png)
 
+### RGB - depth coordinates mapping
+Kinect v2 uses different cameras for RGB and depth images, there are distortions between these two different views, also different size images. To make good collaborative analysis of RGB and depth information. Coordinates matching is needed.
+If using Kinect SDK [repo](https://github.com/microsoft/Azure-Kinect-Sensor-SDK), one command should achiecve the goal:
+```
+MapDepthFrameToColorSpace(512 * 512, depthData, 512 * 512, m_pColorCoordinates);
+```
+where depthData is the depth image,  m_pColorCoordinates is the result mapped from depth to color space.
+I didn't have the camera device with me so were not able to use SDK or do the precise calibration manually. I took example from [this blog](https://www.lhyd.top/archives/339182.html), applied their parameters directly to our images, so the matching result below looks pretty sketchy. 
+
+![](https://github.com/BobbyZ04/dairycow-BCS-classification/blob/main/images/coordinate_matching.JPG)
+
+If I got the device all set up I would try both SDK and mannual calibration, should be able to aquire good results.
+
+##Next Step
+Enlarge dataset, compare more sophisticated DL models, try YOLO/RCNN for detecting in the wild eventually to achieve fully automatic BCS estimation.
